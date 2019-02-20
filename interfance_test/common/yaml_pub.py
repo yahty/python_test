@@ -7,7 +7,7 @@ print(yaml_path)
 
 def write_yaml(value):
     """
-    把数据写入到yaml文件，注意每次写入内容会清空已有内容
+    把字典数据写入到yaml文件，注意每次写入内容会清空已有内容
     :param value: 需写入的内容，如：{"token": value}
     :return:
     """
@@ -20,7 +20,7 @@ def write_yaml(value):
 def get_yaml():
     """
     从yaml文件读取值
-    :return: 数据
+    :return: 返回字典类型的数据
     """
     a = open(yaml_path, "r", encoding="utf-8")
     return yaml.load(a.read(), Loader=yaml.Loader)

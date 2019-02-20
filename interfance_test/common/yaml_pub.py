@@ -7,7 +7,7 @@ print(yaml_path)
 
 def write_yaml(value):
     """
-    把字典数据写入到yaml文件，注意每次写入内容会清空已有内容
+    把字典类型的数据写入到yaml文件，注意每次写入内容会清空已有内容
     :param value: 需写入的内容，如：{"token": value}
     :return:
     """

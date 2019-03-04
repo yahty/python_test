@@ -27,13 +27,13 @@ class Optool(object):
         return url
 
 
-    def better_show_json(self, json_str):
+    def better_show_json(self, dict_str):
         """
         python数据类型转化为json数据类型
         :json_str: python数据类型
         :return: json
         """
-        return json.dumps(json_str,indent=4)
+        return json.dumps(dict_str,indent=4)
 
 
     def re_get_values(self, pattern, response, num):

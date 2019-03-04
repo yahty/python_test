@@ -17,7 +17,7 @@ class Womovie(object):
 
     def login(self, username, psw):
         """登录"""
-        url = "http://61.191.24.229:5040/IosAiMovie/AiMovie/inputPassword"
+        url = "http://61.171.24.229:5040/IosAiMovie/AiMovie/inputPassword"
         ret = self.s.get(url)
         # 提取登录Token
         form_token = re.findall(r"id=\"Token\" value=\"(.+?)\"", ret.text)[0]
@@ -30,7 +30,7 @@ class Womovie(object):
         verification_token = re.findall(pattern, ret.text)[0]
         self.log.info("登录参数：__RequestVerificationToken=%s" % verification_token)
         # 登录url
-        url1 = "http://61.191.24.229:5040/IosAiMovie/MySlefContent/IosLoginIn"
+        url1 = "http://61.171.24.229:5040/IosAiMovie/MySlefContent/IosLoginIn"
         headers = {"X-Requested-With": "XMLHttpRequest",
                    "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
                    "__RequestVerificationToken": verification_token

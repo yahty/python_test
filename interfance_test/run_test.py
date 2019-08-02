@@ -7,7 +7,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from common.readConfig import ReadConfig
 
-# 当前脚本所在的文件路径
+# 当前脚本所在的文件路径!
 cur_path = os.path.dirname(os.path.realpath(__file__))
 
 def add_case(case_name="case", rule="test*.py"):
